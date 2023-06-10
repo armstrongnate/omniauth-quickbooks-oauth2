@@ -14,13 +14,13 @@ module OmniAuth
 
       uid { realm_id }
 
-      info do 
+      info do
         {
-          name: "#{raw_info[:givenName]} #{raw_info[:familyName]}",
-          email: raw_info[:emailVerified] ? raw_info[:email] : nil,
-          first_name: raw_info[:givenName],
-          last_name: raw_info[:familyName],
-          phone: raw_info[:phoneNumberVerified] ? raw_info[:phoneNumber] : nil,
+          name: "#{raw_info[:given_name]} #{raw_info[:family_name]}",
+          email: raw_info[:email_verified] ? raw_info[:email] : nil,
+          first_name: raw_info[:given_name],
+          last_name: raw_info[:family_name],
+          phone: raw_info[:phone_number_verified] ? raw_info[:phone_number] : nil,
         }
       end
 
